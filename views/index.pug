@@ -1,0 +1,33 @@
+extends layout
+
+block content
+	header
+		.header-video-container
+			video.header-video(autoplay='' muted='' loop='')
+				source(src=`videos/${headerVideoMp4}` type='video/mp4')
+		.header-content.fullscreen
+			.header-content__top
+				h1=siteTitle
+				.menu-container
+					span.menu-icon &#x2630;
+					ul.menu.hide
+						li
+							a(href='#portfolio-overview') Portfolio
+						li
+							a(href='#') About
+						li
+							a(href='#') Contact
+			.tagline= tagline
+			.scroll-indicator.bounce
+				a(href='#portfolio-overview')
+					.downward-arrow
+	main#portfolio-overview.portfolio-overview
+		h3= portfolioItemsTitle
+		.portfolio-items
+			each item in portfolioItems
+				div(class=`grid-${item.gridLength}`)
+					a(href=item.url)
+						img(src=`http://${baseUrl}/images/thumbnails/${item.thumbnail}`)
+						.portfolio-text
+							h4= item.title
+							span= item.shortDescription

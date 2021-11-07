@@ -1,0 +1,132 @@
+{
+  "siteTitle": "Henry Brown",
+  "tabTitle": "Henry Brown Art",
+  "tagline": "Animator. Editor. Nacho Eater.",
+  "portfolioItemsTitle": "Selected Works",
+  "portfolioExtraContentTitle": "Gallery",
+  "headerVideoMp4": "videoMp4-1636320929801-3946914.mp4",
+  "headerVideoWebm": "video.webm",
+  "portfolioItems": [
+    {
+      "title": "Piece 1",
+      "url": "piece-1",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "image-1636324458989-367550752.webp",
+      "thumbnail": "thumbnail-1636315940727-740608858.png",
+      "videoURL": "https://player.vimeo.com/video/637704364?h=190d6fd22b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "Piece 2",
+      "url": "piece-2",
+      "shortDescription": "Short description",
+      "description": "This piece came to me while I was taking a shit the other day. I hadn't eaten any fiber for weeks. This was a struggle of life or death. I used every iota of strength I had to push out this oversized poo that felt as if it were made of glass. The throes of pain gave way to unbridled epiphany. What if there were some sort of meat world? What if a robot man reigned supreme over this divine land? After I awoke, having passed out on the bathroom floor, I ordered a bran muffin and began to work.",
+      "image": "image-1636315340571-688344913.png",
+      "thumbnail": "thumbnail-1636315340586-385025440.png",
+      "videoURL": "",
+      "gridLength": 1,
+      "gallery": [
+        {
+          "image": "galleryImage-1636319410129-728924599.png",
+          "thumbnail": "galleryThumbnail-1636319410141-729898040.png"
+        }
+      ]
+    },
+    {
+      "title": "Piece 3",
+      "url": "piece-3",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "image-1636324592506-816045115.png",
+      "thumbnail": "thumbnail-1636324597943-527011148.png",
+      "videoURL": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "Piece 4",
+      "url": "piece-4",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "image-1636315397432-587761761.png",
+      "thumbnail": "thumbnail-1636315397437-870034676.png",
+      "videoURL": "",
+      "gridLength": 3,
+      "gallery": []
+    },
+    {
+      "title": "Piece 5",
+      "url": "piece-5",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "image-1636315549375-995954893.png",
+      "thumbnail": "thumbnail-1636315549394-362034498.png",
+      "videoURL": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "Piece 6",
+      "url": "piece-6",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "image-1636315631389-855317571.png",
+      "thumbnail": "thumbnail-1636315631403-530320077.png",
+      "videoURL": "",
+      "gridLength": 2,
+      "gallery": []
+    },
+    {
+      "title": "Piece 7",
+      "url": "piece-7",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "image-1636315920207-763374338.png",
+      "thumbnail": "thumbnail-1636315920255-443508551.png",
+      "videoURL": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "Piece 8",
+      "url": "piece-8",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "8.png",
+      "thumbnail": "8.png",
+      "videoURL": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "Piece 9",
+      "url": "piece-9",
+      "shortDescription": "Short description",
+      "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
+      "image": "9.png",
+      "thumbnail": "9.png",
+      "videoURL": "",
+      "gridLength": 1,
+      "gallery": []
+    }
+  ],
+  "socials": [
+    {
+      "title": "Instagram",
+      "icon": "instagram.svg",
+      "url": "https://www.instagram.com/bort_irl/"
+    },
+    {
+      "title": "Vimeo",
+      "icon": "vimeo.svg",
+      "url": "https://vimeo.com/henrysbrown"
+    },
+    {
+      "title": "LinkedIn",
+      "icon": "linkedin.svg",
+      "url": "https://www.linkedin.com/in/henry-s-brown"
+    }
+  ]
+}

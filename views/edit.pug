@@ -1,0 +1,56 @@
+extends layout
+
+block content
+	header
+		.header-content
+			.header-content__top
+				span.back-arrow
+					a(href=`http://${baseUrl}`) &larr;
+				h1
+					a(href=`http://${baseUrl}`)=siteTitle
+				.menu-container
+					span.menu-icon &#x2630;
+					ul.menu.hide
+						li
+							a(href='./#portfolio-overview') Portfolio
+						li
+							a(href='#') About
+						li
+							a(href='#') Contact
+	main
+		form(method='post', enctype='multipart/form-data')
+			.edit-areas
+				h3 General
+				.edit-general
+					label Site Title
+						input(name='siteTitle', type='text', value=siteTitle)
+					label Browser Tab Title
+						input(name='tabTitle', type='text', value=tabTitle)
+					label Portfolio Gallery Title
+						input(name='portfolioItemsTitle', type='text', value=portfolioItemsTitle)
+					label Portfolio Extra Content Title
+						input(name='portfolioExtraContentTitle', type='text', value=portfolioExtraContentTitle)
+				h3 Landing Page
+				.edit-general
+					label Tagline
+						input(name='tagline', type='text', value=tagline)
+					label Video (mp4)
+						input(name='videoMp4', type='file')
+					label Video (webm)
+						input(name='videoWebm', type='file')
+				h3 Socials
+				.edit-socials
+					each social in socials
+						label=`${social.title} URL`
+							input(name='social', type='text', value=social.url)
+			.form-actions
+				button.save.primary Save
+				input.reset.secondary(type='reset', value='Reset')
+		h3 Portfolio Items
+		.portfolio-items
+			each item, key in portfolioItems
+				div(class=`grid-${item.gridLength}`)
+					a(href=`/edit/${key}`)
+						img(src=`http://${baseUrl}/images/thumbnails/${item.thumbnail}`)
+						.portfolio-text
+							h4=`Edit ${item.title}`

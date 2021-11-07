@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	header
+		.header-content
+			.header-content__top
+				span.back-arrow
+					a(href='./') &larr;
+				h1
+					a(href='./')=siteTitle
+				.menu-container
+					span.menu-icon &#x2630;
+					ul.menu.hide
+						li
+							a(href='./#portfolio-overview') Portfolio
+						li
+							a(href='#') About
+						li
+							a(href='#') Contact
+	main.portfolio-content
+		h2=item.title
+		.featured-content
+			if item.videoURL == ""
+				img(src=`images/${item.image}`)
+			else
+				iframe(src=item.videoURL, frameborder="0", allow="autoplay; fullscreen; picture-in-picture", allowfullscreen)
+				script(src="https://player.vimeo.com/api/player.js")
+		.portfolio-description
+			p=item.description
+		if item.gallery && item.gallery.length
+			section.portfolio-content__additional
+				h3=portfolioExtraContentTitle
+				.portfolio-items
+					each galleryItem in item.gallery
+						.grid-1.lightbox-thumbnail
+							img(src=`images/gallery/thumbnails/${galleryItem.thumbnail}`, data-image=`images/gallery/${galleryItem.image}`)
+		.lightbox
+			img(src='', class='lightbox-image')
+			.close-lightbox
+				| ×

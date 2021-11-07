@@ -1,0 +1,123 @@
+{
+  "siteTitle": "",
+  "tabTitle": "",
+  "tagline": "",
+  "portfolioItemsTitle": "",
+  "portfolioExtraContentTitle": "",
+  "headerVideoMp4": "",
+  "headerVideoWebm": "",
+  "portfolioItems": [
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 1,
+      "gallery": [
+        {
+          "image": "",
+          "thumbnail": ""
+        }
+      ]
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 3,
+      "gallery": []
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 2,
+      "gallery": []
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 1,
+      "gallery": []
+    },
+    {
+      "title": "",
+      "url": "",
+      "shortDescription": "",
+      "description": "",
+      "image": "",
+      "thumbnail": "",
+      "gridLength": 1,
+      "gallery": []
+    }
+  ],
+  "socials": [
+    {
+      "title": "",
+      "icon": "",
+      "url": ""
+    },
+    {
+      "title": "",
+      "icon": "",
+      "url": ""
+    },
+    {
+      "title": "",
+      "icon": "",
+      "url": ""
+    }
+  ]
+}

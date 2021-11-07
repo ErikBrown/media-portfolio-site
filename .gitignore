@@ -1,19 +1,17 @@
 .DS_Store
 
-# Images
-images/avatars/
-images/captchas/
-images/smileys/
-images/member_photos/
-images/signature_attachments/
-images/pm_attachments/
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
 
-# For security do not publish the following files
-system/expressionengine/config/database.php
-system/expressionengine/config/config.php
+pids
+logs
+results
+build
 
-# Caches
-sized/
-thumbs/
-_thumbs/
-*/expressionengine/cache/*
+node_modules
