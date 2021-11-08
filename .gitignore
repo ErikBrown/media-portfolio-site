@@ -13,9 +13,9 @@ pids
 logs
 results
 build
+data
+bin
 public/images
 public/videos
-data
-data
 
 node_modules
