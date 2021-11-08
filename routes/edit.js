@@ -7,31 +7,30 @@ let data = require('../data/data.json');
 const multer  = require('multer');
 const imageUpload = multer({ dest: 'uploads/' });
 
-// const storage = multer.diskStorage({
-// 	destination: function (req, file, cb) {
-// 		if (file.fieldname === 'image') {
-// 			cb(null, 'public/images/');
-// 		}
-// 		else if (file.fieldname === 'thumbnail') {
-// 			cb(null, 'public/images/thumbnails/');
-// 		} else if (file.fieldname.includes('video')) {
-// 			cb(null, 'public/videos/');
-// 		} else if (file.fieldname === 'galleryImage') {
-// 			cb(null, 'public/images/gallery');
-// 		} else if (file.fieldname === 'galleryThumbnail') {
-// 			cb(null, 'public/images/gallery/thumbnails');
-// 		} else {
-// 			cb(null, 'public/video/');
-// 		}
-// 	},
-// 	filename: function (req, file, cb) {
-// 		const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-// 		cb(null, `${file.fieldname}-${uniqueSuffix}${path.extname(file.originalname)}`);
-// 	}
-// });
+const diskStorage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		if (file.fieldname === 'image') {
+			cb(null, 'public/images/');
+		} else if (file.fieldname === 'thumbnail') {
+			cb(null, 'public/images/thumbnails/');
+		} else if (file.fieldname.includes('video')) {
+			cb(null, 'public/videos/');
+		} else if (file.fieldname === 'galleryImage') {
+			cb(null, 'public/images/gallery');
+		} else if (file.fieldname === 'galleryThumbnail') {
+			cb(null, 'public/images/gallery/thumbnails');
+		} else {
+			cb(null, 'public/video/');
+		}
+	},
+	filename: function (req, file, cb) {
+		const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+		cb(null, `${file.fieldname}-${uniqueSuffix}${path.extname(file.originalname)}`);
+	}
+});
+const diskUpload = multer({storage: diskStorage});
 
 const storage = multer.memoryStorage();
-
 const upload = multer({storage: storage});
 
 router.get('/edit', function(req, res, next) {
@@ -46,7 +45,7 @@ router.get('/edit', function(req, res, next) {
 });
 
 router.post('/edit', function(req, res, next) {
-	const cpUpload = upload.fields([
+	const cpUpload = diskUpload.fields([
 		{ name: 'videoMp4', maxCount: 1 },
 		{ name: 'videoWebm', maxCount: 1 }
 	]);
