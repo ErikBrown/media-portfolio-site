@@ -88,3 +88,18 @@ document.querySelectorAll('[data-gallery-delete-id]').forEach(element => {
 		})
 	})
 })
+
+const submitButton = document.querySelector('.save');
+if (submitButton) {
+	submitButton.addEventListener('click', e => {
+		const galleryAddParents = document.querySelectorAll('.add-gallery-item-inputs');
+		galleryAddParents.forEach(item => {
+			const fileInputs = item.querySelectorAll('input');
+			if (fileInputs[0].files.length !== fileInputs[1].files.length) {
+				e.preventDefault();
+				// TODO: Not alert
+				alert('Missing Gallery Image Thumbnail!');
+			}
+		})
+	})
+}
