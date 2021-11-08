@@ -15,7 +15,7 @@ results
 build
 public/images
 public/videos
-data/data.json
-data/data-old.json
+data
+data
 
 node_modules
