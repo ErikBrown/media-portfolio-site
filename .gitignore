@@ -13,5 +13,7 @@ pids
 logs
 results
 build
+public/images
+public/videos
 
 node_modules
