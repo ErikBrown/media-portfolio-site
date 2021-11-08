@@ -1,6 +1,6 @@
 {
   "siteTitle": "Henry Brown",
-  "tabTitle": "Henry Brown Art",
+  "tabTitle": "Henry Brown fArt",
   "tagline": "Animator. Editor. Nacho Eater.",
   "portfolioItemsTitle": "Selected Works",
   "portfolioExtraContentTitle": "Gallery",
@@ -12,8 +12,8 @@
       "url": "piece-1",
       "shortDescription": "Short description",
       "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
-      "image": "image-1636324458989-367550752.webp",
-      "thumbnail": "thumbnail-1636315940727-740608858.png",
+      "image": "image-1636332232853-209087532.webp",
+      "thumbnail": "thumbnail-1636332232851-671734811.webp",
       "videoURL": "",
       "gridLength": 1,
       "gallery": []
@@ -23,16 +23,11 @@
       "url": "piece-2",
       "shortDescription": "Short description",
       "description": "This piece came to me while I was taking a shit the other day. I hadn't eaten any fiber for weeks. This was a struggle of life or death. I used every iota of strength I had to push out this oversized poo that felt as if it were made of glass. The throes of pain gave way to unbridled epiphany. What if there were some sort of meat world? What if a robot man reigned supreme over this divine land? After I awoke, having passed out on the bathroom floor, I ordered a bran muffin and began to work.",
-      "image": "image-1636315340571-688344913.png",
-      "thumbnail": "thumbnail-1636315340586-385025440.png",
+      "image": "image-1636333130454-759967881.webp",
+      "thumbnail": "thumbnail-1636333130453-414469859.webp",
       "videoURL": "",
       "gridLength": 1,
-      "gallery": [
-        {
-          "image": "galleryImage-1636319410129-728924599.png",
-          "thumbnail": "galleryThumbnail-1636319410141-729898040.png"
-        }
-      ]
+      "gallery": []
     },
     {
       "title": "Piece 3",
@@ -51,7 +46,7 @@
       "shortDescription": "Short description",
       "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
       "image": "image-1636315397432-587761761.png",
-      "thumbnail": "thumbnail-1636315397437-870034676.png",
+      "thumbnail": "thumbnail-1636333084135-51365179.webp",
       "videoURL": "",
       "gridLength": 3,
       "gallery": []
@@ -72,8 +67,8 @@
       "url": "piece-6",
       "shortDescription": "Short description",
       "description": "Long description. Blah blah blah. Blah blah blah. Wowzers",
-      "image": "image-1636315631389-855317571.png",
-      "thumbnail": "thumbnail-1636315631403-530320077.png",
+      "image": "image-1636333148208-473816148.webp",
+      "thumbnail": "thumbnail-1636333148208-340784788.webp",
       "videoURL": "",
       "gridLength": 2,
       "gallery": []
@@ -128,5 +123,10 @@
       "icon": "linkedin.svg",
       "url": "https://www.linkedin.com/in/henry-s-brown"
     }
+  ],
+  "social": [
+    "https://www.instagram.com/bort_irl/",
+    "https://vimeo.com/henrysbrown",
+    "https://www.linkedin.com/in/henry-s-brown"
   ]
 }

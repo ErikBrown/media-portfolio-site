@@ -76,12 +76,12 @@ if (resetButton) {
 	})
 }
 
-document.querySelectorAll('[data-gallery-index]').forEach(element => {
+document.querySelectorAll('[data-gallery-delete-id]').forEach(element => {
 	element.addEventListener('click', e => {
 		e.preventDefault();
 		const element = e.currentTarget;
 		fetch(
-			`${window.location.pathname}/${element.dataset.galleryIndex}`,
+			`${window.location.pathname}/${element.dataset.galleryDeleteId}`,
 			{ method: 'DELETE' }
 		).then(response => {
 			element.remove();

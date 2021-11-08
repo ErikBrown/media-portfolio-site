@@ -39,12 +39,12 @@ block content
 					label=`Thumbnail Image (${thumbnailSize})`
 						input(name='thumbnail', type='file')
 					label Vimeo URL (Overrides Main Image)
-						input(name='videoURL' type='text', item.videoURL)
+						input(name='videoURL' type='text', value=item.videoURL)
 				h3 Gallery Items
 				.edit-gallery
 					.portfolio-items
 						each galleryItem, key in item.gallery
-							div.grid-1(data-gallery-index=key)
+							div.grid-1('data-gallery-delete-id'=galleryItem.id)
 								a
 									img(src=`http://${baseUrl}/images/gallery/thumbnails/${galleryItem.thumbnail}`)
 									.portfolio-text
