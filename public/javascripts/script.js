@@ -47,7 +47,7 @@ if (addGalleryButton) {
 	addGalleryButton.addEventListener('click', e => {
 		e.preventDefault();
 		const input1 = createLabelInput('Gallery Image', 'galleryImage');
-		const input2 = createLabelInput('Gallery Thumbnail (300x300)', 'galleryThumbnail');
+		const input2 = createLabelInput('Gallery Thumbnail (450x450)', 'galleryThumbnail');
 		const addGalleryInputArea = document.querySelector('.add-gallery-item-inputs');
 		addGalleryInputArea.appendChild(input1);
 		addGalleryInputArea.appendChild(input2);

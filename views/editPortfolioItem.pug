@@ -1,11 +1,11 @@
 extends layout
 
 block content
-	- var thumbnailSize="300x300"
+	- var thumbnailSize="450x450"
 	if (item.gridLength == 2)
-		- thumbnailSize = "600x300"
-	if (item.gridLength == 3)
 		- thumbnailSize = "900x300"
+	if (item.gridLength == 3)
+		- thumbnailSize = "1350x300"
 	header
 		.header-content
 			.header-content__top

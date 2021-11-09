@@ -166,8 +166,8 @@ router.post('/edit/:path', function(req, res, next) {
 								quality: 100
 							})
 							.resize({
-								width: 300,
-								height: 300,
+								width: 450,
+								height: 450,
 								fit: 'cover'
 							})
 							.toFile(`${pathThumbnail}${fileName}`)
