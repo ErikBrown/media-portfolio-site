@@ -212,7 +212,7 @@ router.delete('/edit/:portfolioIndex/:galleryId', function(req, res, next) {
 			deleteFile(`./public/images/gallery/thumbnails/${galleryItem.image}`);
 			const newData = { ...data };
 			newData.portfolioItems[req.params.portfolioIndex].gallery.splice(index, 1);
-			saveData(newData);
+			saveData(newData, res, '');
 		}
 	});
 	res.status(204).send(null);
@@ -227,7 +227,9 @@ function saveData(newData, res, redirect) {
 				'utf-8'
 			).then(done => {
 				data = newData;
-				res.redirect(303, redirect);
+				if (redirect) {
+					res.redirect(303, redirect);
+				}
 			}).catch(err => {
 				console.error(err);
 				res.status(500).send(err);
