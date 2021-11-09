@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var data = require('../data/data.json');
+const getData = require('../utils/importData');
 
 router.get('/:path', function(req, res, next) {
 	const filteredItems = data.portfolioItems.filter(item => {
@@ -22,7 +23,7 @@ router.get('/:path', function(req, res, next) {
 			pageClass:'portfolio-page',
 			item: item,
 			baseUrl: req.get('host'),
-			...data
+			...getData()
 		}
 	);
 });

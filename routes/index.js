@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var data = require('../data/data.json');
+const getData = require('../utils/importData')
 
 router.get('/', function(req, res, next) {
 	res.render(
@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 		{
 			pageClass:'landing-page',
 			baseUrl: req.get('host'),
-			...data
+			...getData()
 		}
 	);
 });

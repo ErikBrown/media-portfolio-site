@@ -6,6 +6,7 @@ const sharp = require('sharp');
 let data = require('../data/data.json');
 const multer  = require('multer');
 const imageUpload = multer({ dest: 'uploads/' });
+const getData = require('../utils/importData')
 
 const diskStorage = multer.diskStorage({
 	destination: function (req, file, cb) {
@@ -39,7 +40,7 @@ router.get('/edit', function(req, res, next) {
 		{
 			pageClass:'edit-page',
 			baseUrl: req.get('host'),
-			...data
+			...getData()
 		}
 	);
 });
@@ -184,7 +185,6 @@ router.post('/edit/:path', function(req, res, next) {
 			}
 			Promise.all(promises)
 			.then(() => {
-				console.log(newData.portfolioItems[portfolioIndex].gallery)
 				saveData(newData, res, `/edit/${portfolioIndex}`)
 			})
 		}
@@ -198,13 +198,12 @@ router.get('/edit/:path', function(req, res, next) {
 			pageClass:'edit-page',
 			item: data.portfolioItems[req.params.path],
 			baseUrl: req.get('host'),
-			...data
+			...getData()
 		}
 	);
 });
 
 router.delete('/edit/:portfolioIndex/:galleryId', function(req, res, next) {
-	console.log(req.params.galleryId)
 	data.portfolioItems[req.params.portfolioIndex].gallery.forEach((val, index) => {
 		if (val.id.toString() === req.params.galleryId.toString()) {
 			const galleryItem = data.portfolioItems[req.params.portfolioIndex].gallery[index];

@@ -18,7 +18,10 @@ const lightboxThumbnail = document.querySelectorAll('.lightbox-thumbnail');
 lightboxThumbnail.forEach(thumbnail => {
 	thumbnail.addEventListener('click', e => {
 		const img = e.currentTarget.querySelector('img');
-		console.log(img)
+		const lightboxImg = lightbox.querySelector('img');
+		lightboxImg.onload = function() {
+			lightboxImg.classList.add('lightbox-loaded');
+		}
 		lightbox.querySelector('img').src = img.dataset.image
 		document.body.classList.add('show-lightbox')
 		document.body.style.overflowY = 'auto';
@@ -38,6 +41,8 @@ if (lightbox) {
 		document.body.style.top = '';
 		window.scrollTo(0, parseInt(scrollY || '0') * -1);
 		document.body.classList.remove('show-lightbox');
+		lightbox.querySelector('img').classList.remove('lightbox-loaded');
+		lightbox.querySelector('img').src = '';
 	})
 }
 

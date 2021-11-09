@@ -3,7 +3,6 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-let data = require('./data/data.json');
 
 let indexRouter = require('./routes/index');
 let porfolioRouter = require('./routes/portfolio');
