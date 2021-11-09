@@ -13,6 +13,7 @@ menuIcon.addEventListener('click', () => {
 })
 
 const lightbox = document.querySelector('.lightbox');
+let timeout;
 
 const lightboxThumbnail = document.querySelectorAll('.lightbox-thumbnail');
 lightboxThumbnail.forEach(thumbnail => {
@@ -20,7 +21,7 @@ lightboxThumbnail.forEach(thumbnail => {
 		const img = e.currentTarget.querySelector('img');
 		const lightboxImg = lightbox.querySelector('.lightbox-image');
 		const lightboxLoader = lightbox.querySelector('.lightbox-loader');
-		setTimeout(() => {
+		timeout = setTimeout(() => {
 			if (!lightboxImg.classList.contains('lightbox-loaded')) {
 				lightboxLoader.classList.remove('hide');
 				lightboxImg.classList.add('hide');
@@ -55,6 +56,7 @@ if (lightbox) {
 		setTimeout(() => {
 			lightboxImg.src = '';
 		}, 499);
+		clearTimeout(timeout);
 	})
 }
 
