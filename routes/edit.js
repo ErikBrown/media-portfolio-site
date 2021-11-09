@@ -109,8 +109,8 @@ router.post('/edit/:path', function(req, res, next) {
 							quality: 100,
 						})
 						.resize({
-							width: 300 * Number(data.portfolioItems[portfolioIndex].gridLength),
-							height: 300,
+							width: 450 * Number(data.portfolioItems[portfolioIndex].gridLength),
+							height: 450,
 							fit: 'cover'
 						})
 						.toFile(`${path}${fileName}`)
