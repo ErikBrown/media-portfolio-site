@@ -147,7 +147,7 @@ a {
 
 .fullscreen {
 	height: 100%;
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.2);
 }
 
 .header-content__top {
@@ -161,8 +161,8 @@ a {
 	justify-content: center;
 	height: 90%;
 	width: 100%;
-	font-size: 5rem;
-	line-height: 5rem;
+	font-size: 4rem;
+	line-height: 4rem;
 	font-weight: 200;
 }
 
