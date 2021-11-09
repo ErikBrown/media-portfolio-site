@@ -458,6 +458,12 @@ hr {
 .lightbox-image {
 	max-width: 90%;
 	max-height: 90%;
+	opacity: 0;
+	transition: .25s;
+}
+
+.lightbox-loaded {
+	opacity: 1;
 }
 
 .close-lightbox {
