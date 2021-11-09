@@ -447,7 +447,7 @@ hr {
 	z-index: 1000;
 	visibility: hidden;
 	opacity: 0;
-	transition: .3s;
+	transition: .5s;
 }
 
 .show-lightbox .lightbox {
@@ -458,12 +458,6 @@ hr {
 .lightbox-image {
 	max-width: 90%;
 	max-height: 90%;
-	opacity: 0;
-	transition: .4s;
-}
-
-.lightbox-loaded {
-	opacity: 1;
 }
 
 .close-lightbox {
