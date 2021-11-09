@@ -18,11 +18,20 @@ const lightboxThumbnail = document.querySelectorAll('.lightbox-thumbnail');
 lightboxThumbnail.forEach(thumbnail => {
 	thumbnail.addEventListener('click', e => {
 		const img = e.currentTarget.querySelector('img');
-		const lightboxImg = lightbox.querySelector('img');
+		const lightboxImg = lightbox.querySelector('.lightbox-image');
+		const lightboxLoader = lightbox.querySelector('.lightbox-loader');
+		setTimeout(() => {
+			if (!lightboxImg.classList.contains('lightbox-loaded')) {
+				lightboxLoader.classList.remove('hide');
+				lightboxImg.classList.add('hide');
+			}
+		}, 250);
 		lightboxImg.onload = function() {
+			lightboxImg.classList.remove('hide');
+			lightboxLoader.classList.add('hide');
 			lightboxImg.classList.add('lightbox-loaded');
 		}
-		lightbox.querySelector('img').src = img.dataset.image
+		lightboxImg.src = img.dataset.image
 		document.body.classList.add('show-lightbox')
 		document.body.style.overflowY = 'auto';
 		document.body.style.position = 'fixed';
@@ -41,9 +50,10 @@ if (lightbox) {
 		document.body.style.top = '';
 		window.scrollTo(0, parseInt(scrollY || '0') * -1);
 		document.body.classList.remove('show-lightbox');
-		lightbox.querySelector('img').classList.remove('lightbox-loaded');
+		const lightboxImg = lightbox.querySelector('.lightbox-image');
+		lightboxImg.classList.remove('lightbox-loaded');
 		setTimeout(() => {
-			lightbox.querySelector('img').src = '';
+			lightboxImg.src = '';
 		}, 499);
 	})
 }
