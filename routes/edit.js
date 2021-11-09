@@ -20,6 +20,8 @@ const diskStorage = multer.diskStorage({
 			cb(null, 'public/images/gallery');
 		} else if (file.fieldname === 'galleryThumbnail') {
 			cb(null, 'public/images/gallery/thumbnails');
+		} else if (file.fieldname === 'favicon') {
+			cb(null, 'public/images');
 		} else {
 			cb(null, 'public/video/');
 		}
@@ -48,7 +50,8 @@ router.get('/edit', function(req, res, next) {
 router.post('/edit', function(req, res, next) {
 	const cpUpload = diskUpload.fields([
 		{ name: 'videoMp4', maxCount: 1 },
-		{ name: 'videoWebm', maxCount: 1 }
+		{ name: 'videoWebm', maxCount: 1 },
+		{ name: 'favicon', maxCount: 1 }
 	]);
 	cpUpload(req, res, function (err) {
 		if (err) {
@@ -64,6 +67,10 @@ router.post('/edit', function(req, res, next) {
 			if (req.files.videoWebm) {
 				deleteFile(`./public/videos/${data.headerVideoWebm}`);
 				newData.headerVideoWebm = req.files.videoWebm[0].filename;
+			}
+			if (req.files.favicon) {
+				deleteFile(`./public/images/${data.favicon}`);
+				newData.favicon = req.files.favicon[0].filename;
 			}
 			Object.keys(req.body).forEach(x => {
 				newData[x] = req.body[x];
