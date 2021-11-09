@@ -10,9 +10,9 @@ block content
 		.header-content
 			.header-content__top
 				span.back-arrow
-					a(href=`http://${baseUrl}/edit`) &larr;
+					a(href=`https://${baseUrl}/edit`) &larr;
 				h1
-					a(href=`http://${baseUrl}`)=siteTitle
+					a(href=`https://${baseUrl}`)=siteTitle
 				.menu-container
 					span.menu-icon &#x2630;
 					ul.menu.hide
@@ -46,7 +46,7 @@ block content
 						each galleryItem, key in item.gallery
 							div.grid-1('data-gallery-delete-id'=galleryItem.id)
 								a
-									img(src=`http://${baseUrl}/images/gallery/thumbnails/${galleryItem.thumbnail}`)
+									img(src=`https://${baseUrl}/images/gallery/thumbnails/${galleryItem.thumbnail}`)
 									.portfolio-text
 										h4 Delete
 					.add-gallery-item

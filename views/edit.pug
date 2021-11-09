@@ -5,9 +5,9 @@ block content
 		.header-content
 			.header-content__top
 				span.back-arrow
-					a(href=`http://${baseUrl}`) &larr;
+					a(href=`https://${baseUrl}`) &larr;
 				h1
-					a(href=`http://${baseUrl}`)=siteTitle
+					a(href=`https://${baseUrl}`)=siteTitle
 				.menu-container
 					span.menu-icon &#x2630;
 					ul.menu.hide
@@ -53,6 +53,6 @@ block content
 			each item, key in portfolioItems
 				div(class=`grid-${item.gridLength}`)
 					a(href=`/edit/${key}`)
-						img(src=`http://${baseUrl}/images/thumbnails/${item.thumbnail}`)
+						img(src=`https://${baseUrl}/images/thumbnails/${item.thumbnail}`)
 						.portfolio-text
 							h4=`Edit ${item.title}`
