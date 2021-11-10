@@ -11,7 +11,6 @@ router.get('/:path', function(req, res, next) {
 			return false;
 		}
 	});
-	console.log(req.params.path, filteredItems)
 	if (!filteredItems.length) {
 		next()
 		return

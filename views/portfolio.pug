@@ -26,7 +26,7 @@ block content
 			if item.videoURL == ""
 				img(src=`images/${item.image}`)
 			else
-				iframe(src=item.videoURL, frameborder="0", allow="autoplay; fullscreen; picture-in-picture", allowfullscreen)
+				iframe(src=item.videoURL frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen)
 				script(src="https://player.vimeo.com/api/player.js")
 		.portfolio-description
 			p=item.description
@@ -36,9 +36,9 @@ block content
 				.portfolio-items
 					each galleryItem in item.gallery
 						.grid-1.lightbox-thumbnail
-							img(src=`images/gallery/thumbnails/${galleryItem.thumbnail}`, data-image=`images/gallery/${galleryItem.image}`)
+							img(src=`images/gallery/thumbnails/${galleryItem.thumbnail}` data-image=`images/gallery/${galleryItem.image}`)
 		.lightbox
-			img(src='assets/loader.svg', class='lightbox-loader')
-			img(src='', class='lightbox-image')
+			img(src='assets/loader.svg' class='lightbox-loader')
+			img(src='' class='lightbox-image')
 			.close-lightbox
 				| ×

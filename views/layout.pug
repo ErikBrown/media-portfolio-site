@@ -2,13 +2,13 @@ doctype html
 html
 	head
 		meta(charset='UTF-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		title=tabTitle
-		link(rel='preconnect', href='https://fonts.googleapis.com')
-		link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
-		link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap')
-		link(rel='stylesheet', href='/stylesheets/style.css')
-		link(rel='icon', type=`https://${baseUrl}/image/png`, href=`/images/${favicon}`)
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap')
+		link(rel='stylesheet' href='/stylesheets/style.css')
+		link(rel='icon' type=`https://${baseUrl}/image/png` href=`/images/${favicon}`)
 	body(class=pageClass)
 		block content
 		script(src='/javascripts/script.js')
@@ -16,7 +16,7 @@ html
 			.socials
 				span= siteTitle
 				each social in socials
-					a(href=social.url, title=social.title)
+					a(href=social.url title=social.title)
 						title= social.title
 						img(src=`https://${baseUrl}/assets/${social.icon}`)
 			.bottom-nav
