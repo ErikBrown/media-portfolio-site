@@ -6,7 +6,7 @@ let logger = require('morgan');
 
 let indexRouter = require('./routes/index');
 let porfolioRouter = require('./routes/portfolio');
-let editRouter = require('./routes/edit');
+//let editRouter = require('./routes/edit');
 
 let app = express();
 
