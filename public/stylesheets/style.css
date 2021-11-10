@@ -617,11 +617,10 @@ button.secondary:hover, input.secondary:hover {
 		font-size: 2.3rem;
 		line-height: 3rem;
 	}
-	.portfolio_text * {
+	.portfolio-text * {
 		font-size: 1.25rem;
 		line-height: 1.5rem;
 	}
-
 	h2 {
 		font-size: 3rem;
 	}
@@ -655,7 +654,8 @@ button.secondary:hover, input.secondary:hover {
 	}
 	.portfolio-overview > h3 {
 		padding: 10%;
-	}	.portfolio_text * {
+	}
+	.portfolio-text * {
 		font-size: .8rem;
 		line-height: 1rem;
 	}
