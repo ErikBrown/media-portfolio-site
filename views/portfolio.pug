@@ -1,6 +1,9 @@
 extends layout
 
 block content
+	- var aspectRatio="56.25"
+	if (item.videoURL && item.videoAspectRatio)
+		- aspectRatio = item.videoAspectRatio
 	header
 		.header-content
 			.header-content__top
@@ -19,7 +22,7 @@ block content
 						//- 	a(href='#') Contact
 	main.portfolio-content
 		h2=item.title
-		.featured-content
+		.featured-content(style=`padding-top: ${aspectRatio}%`)
 			if item.videoURL == ""
 				img(src=`images/${item.image}`)
 			else
