@@ -1,6 +1,10 @@
 extends layout
 
 block content
+	- var aspectRatio = "56.25"
+	- var reelTitle = "Reel"
+	- var reelUrl = "https://player.vimeo.com/video/678457917?h=11566d92e8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+	- var reelTitle = "Video & 3D Animation Reel"
 	header
 		.header-video-container
 			video.header-video(autoplay muted loop playsinline)
@@ -20,15 +24,21 @@ block content
 						//- 	a(href='#') Contact
 			.tagline= tagline
 			.scroll-indicator.bounce
-				a(href='#portfolio-overview')
+				a(href='#reel')
 					.downward-arrow
-	main#portfolio-overview.portfolio-overview
-		h3= portfolioItemsTitle
-		.portfolio-items
-			each item in portfolioItems
-				div(class=`grid-${item.gridLength}`)
-					a(href=item.url)
-						img(src=`https://${baseUrl}/images/thumbnails/${item.thumbnail}`)
-						.portfolio-text
-							h4= item.title
-							span= item.shortDescription
+	main
+		div#reel.reel
+			h3=reelTitle
+			.featured-content(style=`padding-top: ${aspectRatio}%`)
+					iframe(src=reelUrl frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen)
+					script(src="https://player.vimeo.com/api/player.js")
+		div#portfolio-overview.portfolio-overview
+			h3=portfolioItemsTitle
+			.portfolio-items
+				each item in portfolioItems
+					div(class=`grid-${item.gridLength}`)
+						a(href=item.url)
+							img(src=`https://${baseUrl}/images/thumbnails/${item.thumbnail}`)
+							.portfolio-text
+								h4= item.title
+								span= item.shortDescription

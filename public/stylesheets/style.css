@@ -236,12 +236,16 @@ a {
 	transition: border-width 150ms ease-in-out;
 }
 
-.portfolio-overview {
+.landing-page main h3 {
+	padding: 5%;
+}
+
+.reel h3 {
 	text-align: center;
 }
 
-.portfolio-overview > h3 {
-	padding: 5%;
+.portfolio-overview {
+	text-align: center;
 }
 
 .portrait {
